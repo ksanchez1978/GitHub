@@ -1,0 +1,11 @@
+body{
+  font-family:sans-serif;
+  background-color: #1c253f;
+}
+section{
+  color: #fff;
+}
+.bg-color{
+  background-color: rgb(34, 53, 53);
+  border-radius: 10px;
+}
