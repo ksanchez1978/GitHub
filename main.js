@@ -6,8 +6,11 @@ const githubUsername = document.querySelector("#github-username")
 const githubBio = document.querySelector("#github-bio")
 const githubRepo = document.querySelector("#github-repos")
 const githubFollowers = document.querySelector("#github-followers")
-
-
+const githubFollowing = document.querySelector("#github-following")
+const githublocation = document.querySelector("#github-location")
+const githubtwitter = document.querySelector("#github-twitter")
+const githubcompany = document.querySelector("#github-compa")
+const githubblog = document.querySelector("#github-blog")
 
 const githubActionSearch = document.querySelector("#github-action-search");
 const githubInputSearch= document.querySelector("#github-search");
@@ -46,7 +49,7 @@ githubInputSearch.addEventListener("keyup", function (event){
 
 
 
-const obtenerDatosGithub = async (username = "guillermosifu")=>{
+const obtenerDatosGithub = async (username = "ksanchez1978")=>{
     // en este ejempl await va hacer lo sgte
    // ejecuta fetch con la url y una vez que abre la ejecucion recien hara el console log luego 
     const response = await fetch (`https://api.github.com/users/${username}`)
@@ -83,9 +86,12 @@ const setDataUser=(data)=>{
     githubBio.innerHTML = data.bio;
     githubRepo.innerHTML= data.public_repos;
     githubFollowers.innerHTML = data.followers;
-
-
-
+    githubFollowing.innerHTML = data.following;
+    githublocation.innerHTML = data.location;
+    githubtwitter.innerHTML = data.twitter_username;
+    githubcompany.innerHTML = data.company;
+    githubblog.innerHTML = data.blog;
+ 
 
 };
 
